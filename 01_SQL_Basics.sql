@@ -1,0 +1,30 @@
+-- SQL Practice: Employee Table
+
+CREATE TABLE EMPLOYEE (
+    EMPID INT PRIMARY KEY,
+    EMPNAME VARCHAR(50),
+    DEPTID INT,
+    SALARY DECIMAL(10, 2)
+);
+
+INSERT INTO EMPLOYEE
+    (EMPID, EMPNAME, DEPTID, SALARY)
+VALUES
+    (1, 'Mahesh', 101, 60000),
+    (2, 'Rahul', 102, 45000),
+    (3, 'Priya', 101, 75000),
+    (4, 'Arjun', 103, 35000);
+
+-- Display all employees
+SELECT *
+FROM EMPLOYEE;
+
+-- Find employees earning more than 50000
+SELECT EMPNAME, SALARY
+FROM EMPLOYEE
+WHERE SALARY > 50000;
+
+-- Sort employees by salary
+SELECT EMPNAME, SALARY
+FROM EMPLOYEE
+ORDER BY SALARY DESC;
